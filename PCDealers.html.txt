@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Dealers - Kompjuteri i komponenti</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #2c3e50; --secondary: #3498db; --accent: #e74c3c; --light: #ecf0f1; --dark: #2c3e50; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        header { background: var(--primary); color: white; padding: 20px 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .nav-links { list-style: none; display: flex; gap: 20px; }
+        .nav-links a { color: white; text-decoration: none; transition: 0.3s; }
+        .nav-links a:hover { color: var(--secondary); }
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1526328177318-c9f2a6e035d8'); height: 600px; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: white; margin-top: 80px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 800px; padding: 0 20px; }
+        .section { padding: 80px 20px; background: white; }
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .product { border: 1px solid #ddd; border-radius: 8px; padding: 20px; text-align: center; transition: transform 0.3s; }
+        .product:hover { transform: translateY(-5px); }
+        .product h3 { margin: 10px 0; }
+        .product .price { color: var(--accent); font-weight: bold; margin: 10px 0; }
+        .btn { display: inline-block; background: var(--secondary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 10px; }
+        .contact { max-width: 600px; margin: 0 auto; text-align: center; }
+        .contact h2 { margin-bottom: 20px; }
+        footer { background: var(--primary); color: white; text-align: center; padding: 20px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">PC Dealers</div>
+                <ul class="nav-links">
+                    <li><a href="#products">Proizvodi</a></li>
+                    <li><a href="#about">O nama</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>PC Dealers</h1>
+            <p>Vaš partner za snagi computing - od igračkih PC-ova do radnih stanica</p>
+        </div>
+    </section>
+
+    <section class="section" id="products">
+        <div class="container">
+            <h2>Naša ponuda</h2>
+            <div class="products">
+                <div class="product">
+                    <h3>Igrački PC</h3>
+                    <div class="price">Od 80.000 din</div>
+                    <a href="#" class="btn">Naruči</a>
+                </div>
+                <div class="product">
+                    <h3>Radna stanica</h3>
+                    <div class="price">Od 120.000 din</div>
+                    <a href="#" class="btn">Naruči</a>
+                </div>
+                <div class="product">
+                    <h3>Komponenti</h3>
+                    <div class="price">Različita repos</div>
+                    <a href="#" class="btn">Pogledaj</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <h2>Zašto PC Dealers?</h2>
+            <p>Already 3 years on the market, providing high-quality PC solutions for gaming, work, and content creation. We offer competitive prices, expert advice, and excellent customer service.</p>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact">
+                <h2>Kontakt</h2>
+                <p>Adresa: Ušće 15, Beograd</p>
+                <p>Telefon: +381 11 123 456</p>
+                <p>Email: info@pcdealers.com</p>
+                <a href="tel:+38111123456" class="btn">Pozovite nas</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>PC Dealers © 2024. Sva prava zadata.</p>
+        </div>
+    </footer>
+</body>
+</html>
