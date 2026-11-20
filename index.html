@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PC Dealers - prodavnica računara, popravke i montaža u Odžacima">
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="PC Dealers">
+    <meta property="og:description" content="Kompjuteri, popravke, montaža i dostava u Odžacima">
+    <meta property="og:type" content="website">
+    
     <title>PC Dealers - Kompjuteri i komponenti</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,6 +32,12 @@
         .product .price { color: var(--accent); font-weight: bold; margin: 10px 0; }
         .btn { display: inline-block; background: var(--secondary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 10px; }
         .contact { max-width: 600px; margin: 0 auto; text-align: center; }
+    /* Contact form styles */
+    #contact form { display: flex; flex-direction: column; gap: 12px; }
+    #contact form input, #contact form textarea { padding: 8px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
+    #contact form textarea { min-height: 120px; resize: vertical; }
+    #contact form button { padding: 8px 16px; background: var(--secondary); color: white; border: none; border-radius: 5px; cursor: pointer; font-family: inherit; }
+    #contact form button:hover { background: var(--primary); }
         .contact h2 { margin-bottom: 20px; }
         footer { background: var(--primary); color: white; text-align: center; padding: 20px; margin-top: 20px; }
     </style>
@@ -47,7 +59,7 @@
     <section class="hero">
         <div>
             <h1>PC Dealers</h1>
-            <p>Vaš partner za snagi computing - od igračkih PC-ova do radnih stanica</p>
+            <p>Vaš partner za računare - od igračkih PC-ova do radnih stanica</p>
         </div>
     </section>
 
@@ -58,17 +70,17 @@
                 <div class="product">
                     <h3>Igrački PC</h3>
                     <div class="price">Od 80.000 din</div>
-                    <a href="#" class="btn">Naruči</a>
+                    <a href="#contact" class="btn">Naruči</a>
                 </div>
                 <div class="product">
                     <h3>Radna stanica</h3>
                     <div class="price">Od 120.000 din</div>
-                    <a href="#" class="btn">Naruči</a>
+                    <a href="#contact" class="btn">Naruči</a>
                 </div>
                 <div class="product">
-                    <h3>Komponenti</h3>
-                    <div class="price">Različita repos</div>
-                    <a href="#" class="btn">Pogledaj</a>
+                    <h3>Komponente</h3>
+                    <div class="price">Cene po upitu</div>
+                    <a href="#contact" class="btn">Pogledaj</a>
                 </div>
             </div>
         </div>
@@ -77,7 +89,7 @@
     <section class="section" id="about">
         <div class="container">
             <h2>Zašto PC Dealers?</h2>
-            <p>Already 3 years on the market, providing high-quality PC solutions for gaming, work, and content creation. We offer competitive prices, expert advice, and excellent customer service.</p>
+            <p>Kompjuteri, popravke, montaža i dostava u Odžacima.</p>
         </div>
     </section>
 
@@ -85,18 +97,27 @@
         <div class="container">
             <div class="contact">
                 <h2>Kontakt</h2>
-                <p>Adresa: Ušće 15, Beograd</p>
-                <p>Telefon: +381 11 123 456</p>
-                <p>Email: info@pcdealers.com</p>
-                <a href="tel:+38111123456" class="btn">Pozovite nas</a>
+                <p>Adresa: Zarka Zrenjanina 6, 25250 Odžaci</p>
+                <p>Telefon: 062 1236530</p>
+                <p>Radno vreme: pon–pet 09:00–20:00, subota i nedelja zatvoreno, zakazivanje obavezno</p>
+                <p>Facebook: <a href="https://facebook.com/PCDeale" target="_blank">facebook.com/PCDeale</a></p>
+                <p>Email: [email@pcdealers.com]</p>
+                <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
+                    <input type="text" name="name" placeholder="Ime" required aria-label="Ime">
+                    <input type="email" name="email" placeholder="Email" required aria-label="Email">
+                    <textarea name="message" placeholder="Poruka" required aria-label="Poruka"></textarea>
+                    <button type="submit">Pošalji</button>
+                </form>
+                <a href="tel:+381621236530" class="btn">062 1236530</a>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>PC Dealers © 2024. Sva prava zadata.</p>
+            <p>PC Dealers © <span id="year"></span>. Sva prava zadržana.</p>
         </div>
     </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
